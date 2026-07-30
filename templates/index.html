@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Amorata | El lugarcito de Ro</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Barra superior -->
+    <header class="encabezado">
+
+        <a href="/" class="marca">
+            Amorata
+        </a>
+
+        <nav class="menu">
+            <a href="/">Inicio</a>
+            <a href="#quienes-somos">Quiénes somos</a>
+            <a href="/catalogo">Catálogo</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
+        <a href="/catalogo" class="boton-menu">
+            Ver catálogo
+        </a>
+
+    </header>
+
+
+    <main>
+
+        <!-- Portada principal -->
+        <section class="portada">
+
+            <div class="forma forma-uno"></div>
+            <div class="forma forma-dos"></div>
+
+            <div class="portada-contenido">
+
+                <img
+                    src="{{ url_for('static', filename='img/logo.png') }}"
+                    alt="Logo de Amorata"
+                    class="logo-portada"
+                >
+
+                <p class="subtitulo">
+                    EL LUGARCITO DE RO
+                </p>
+
+                <div class="detalle-amorata">
+
+                    <span></span>
+
+                    <img
+                        src="{{ url_for('static', filename='img/corazon.png') }}"
+                        alt="Corazón Amorata"
+                        class="corazon-amorata"
+                    >
+
+                    <span></span>
+
+                </div>
+
+                <p class="frase">
+                    Tu antojo, mi próximo desafío.
+                </p>
+
+                <div class="acciones-portada">
+
+                    <a href="/catalogo" class="boton-principal">
+                        Descubrir catálogo
+                    </a>
+
+                    <a href="#quienes-somos" class="boton-secundario">
+                        Conocé nuestra historia
+                    </a>
+
+                </div>
+
+            </div>
+
+            <a href="#quienes-somos" class="bajar">
+                <span>Descubrir</span>
+                <span class="flecha">↓</span>
+            </a>
+
+        </section>
+
+
+        <!-- Quiénes somos -->
+        <section
+            class="quienes-somos nueva-historia"
+            id="quienes-somos"
+        >
+
+            <div class="historia-contenido">
+
+                <p class="etiqueta">
+                    Conocé a Ro
+                </p>
+
+                <h2>
+                    Detrás de Amorata
+                </h2>
+
+                <div class="bloque-historia">
+
+                    <h3>Hola, soy Ro.</h3>
+
+                    <p>
+                        Soy esa pequeña parte detrás de Amorata que descubrió
+                        este amor desde muy chica, con la convicción de que en
+                        la vida existen cosas que nos llenan y nos devuelven a
+                        quienes realmente somos.
+                    </p>
+
+                    <p>
+                        A la par de mi camino como estudiante, encontré en la
+                        pastelería un lugar para desconectar de la rutina,
+                        silenciar las dudas y darle voz a lo que realmente
+                        sueña mi corazón.
+                    </p>
+
+                </div>
+
+                <div class="bloque-historia">
+
+                    <h3>¿Por qué Amorata?</h3>
+
+                    <p>
+                        Amorata representa un amor genuino por los detalles y
+                        una dedicación que no conoce de pausas, porque cuando
+                        algo mueve el corazón, este no puede quedarse quieto.
+                    </p>
+
+                    <p>
+                        Compartir una fecha importante, tomar un mate o
+                        simplemente darnos el gusto de probar algo nuevo
+                        también es una forma de celebrar la vida, saborear,
+                        sentir y disfrutar esos momentos que muchas veces
+                        pasamos por alto.
+                    </p>
+
+                    <p>
+                        En Amorata no hay prisa. No sé cuánto tiempo durará
+                        esta iniciativa, pero sí sé que detrás de cada
+                        preparación hay mucha entrega, ganas y predisposición.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="historia-foto">
+
+                <div class="marco-foto-ro">
+
+                    <img
+                        src="{{ url_for('static', filename='img/ro.jpg') }}"
+                        alt="Ro, creadora de Amorata"
+                    >
+
+                </div>
+
+                <p class="firma-ro">
+                 Porque los recuerdos, también tienen sabor
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Acceso al catálogo -->
+        <section class="catalogo-destacado">
+
+            <div class="catalogo-contenido">
+
+                <p class="etiqueta">
+                    Nuestras creaciones
+                </p>
+
+                <h2>
+                    Un catálogo para cada antojo y ocasión
+                </h2>
+
+                <div class="detalle-centro">
+
+                    <span></span>
+
+                    <img
+                        src="{{ url_for('static', filename='img/corazon.png') }}"
+                        alt="Corazón Amorata"
+                        class="corazon-catalogo"
+                    >
+
+                    <span></span>
+
+                </div>
+
+                <p>
+                    Descubrí nuestros productos, sabores, presentaciones,
+                    descripciones y precios.
+                </p>
+
+                <a href="/catalogo" class="boton-principal">
+                    Ver catálogo completo
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+<!-- Contacto -->
+<section class="seccion-contacto" id="contacto">
+
+    <div class="contacto-encabezado">
+
+        <p class="etiqueta">
+            Contacto
+        </p>
+
+        <h2>Estoy para ayudarte</h2>
+
+        <p>
+            Si querés hacer un pedido, consultar disponibilidad
+            o simplemente sacarte una duda, escribinos.
+        </p>
+
+    </div>
+
+    <div class="contacto-tarjetas">
+
+        <!-- WhatsApp -->
+        <article class="tarjeta-contacto">
+
+            <div class="contacto-icono">
+                <i class="fa-brands fa-whatsapp"></i>
+            </div>
+
+            <h3>WhatsApp</h3>
+
+            <p>
+                Realizá tu pedido o hacé tu consulta directamente.
+            </p>
+
+            <a
+                href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20hacer%20una%20consulta."
+                target="_blank"
+                class="boton-contacto"
+            >
+                Enviar mensaje
+            </a>
+
+        </article>
+
+        <!-- Instagram -->
+        <article class="tarjeta-contacto">
+
+            <div class="contacto-icono">
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+
+            <h3>Instagram</h3>
+
+            <p>
+                Conocé nuestros trabajos, novedades y creaciones.
+            </p>
+
+            <a
+                href="https://instagram.com/amoorataa"
+                target="_blank"
+                class="boton-contacto"
+            >
+                @amoorataa
+            </a>
+
+        </article>
+
+    </div>
+
+</section>
+
+<!-- Footer -->
+<footer>
+
+    <p class="marca-footer">
+        Amorata
+    </p>
+
+    <p class="frase-footer">
+        EL LUGARCITO DE RO
+    </p>
+
+    <p class="contacto-footer">
+        Pedidos y consultas por WhatsApp e Instagram
+    </p>
+
+</footer>
+
+</body>
+</html>
