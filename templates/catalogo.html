@@ -5,15 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo | Amorata</title>
-
-    <!-- CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
@@ -22,12 +18,18 @@
 
     <header class="encabezado">
         <a href="/" class="marca">Amorata</a>
-        <nav class="menu">
+
+        <button class="hamburguesa" id="hamburguesa" aria-label="Abrir menú">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="menu" id="menu">
             <a href="/">Inicio</a>
             <a href="/#quienes-somos">Quiénes somos</a>
             <a href="/catalogo">Catálogo</a>
             <a href="/#contacto">Contacto</a>
         </nav>
+
         <a href="/" class="boton-menu">Volver al inicio</a>
     </header>
 
@@ -47,7 +49,7 @@
 
         <section class="grilla-productos catalogo-circular">
 
-            <!-- 1. CHEESECAKE (Postres) -->
+            <!-- 1. CHEESECAKE -->
             <article class="producto producto-circular" data-categoria="postres">
                 <div class="producto-foto-circular">
                     <img src="{{ url_for('static', filename='img/cheesecake.jpg') }}" alt="Cheesecake de frutilla">
@@ -61,7 +63,7 @@
                 </div>
             </article>
 
-            <!-- 2. TARTA DE COCO (Tartas) -->
+            <!-- 2. TARTA DE COCO -->
             <article class="producto producto-circular" data-categoria="tartas">
                 <div class="producto-foto-circular">
                     <img src="{{ url_for('static', filename='img/tarta-coco.jpg') }}" alt="Tarta de coco y dulce de leche">
@@ -75,7 +77,7 @@
                 </div>
             </article>
 
-            <!-- 3. ROGEL (Postres) -->
+            <!-- 3. ROGEL -->
             <article class="producto producto-circular" data-categoria="postres">
                 <div class="producto-foto-circular">
                     <img src="{{ url_for('static', filename='img/rogel.jpg') }}" alt="Rogel">
@@ -89,7 +91,7 @@
                 </div>
             </article>
 
-            <!-- 4. ROLLS (Panificados) -->
+            <!-- 4. ROLLS -->
             <article class="producto producto-circular" data-categoria="panificados">
                 <div class="producto-foto-circular">
                     <img src="{{ url_for('static', filename='img/rolls.jpg') }}" alt="Rolls de canela">
@@ -103,7 +105,7 @@
                 </div>
             </article>
 
-            <!-- 5. TARTA DE FRUTAS (Tartas) -->
+            <!-- 5. TARTA DE FRUTAS -->
             <article class="producto producto-circular" data-categoria="tartas">
                 <div class="producto-foto-circular">
                     <img src="{{ url_for('static', filename='img/tarta-frutas.jpg') }}" alt="Tarta de frutas">
@@ -117,7 +119,7 @@
                 </div>
             </article>
 
-            <!-- 6. SCONES (Panificados) -->
+            <!-- 6. SCONES -->
             <article class="producto producto-circular" data-categoria="panificados">
                 <div class="producto-foto-circular">
                     <img src="{{ url_for('static', filename='img/scones.jpg') }}" alt="Scones de queso">
@@ -134,10 +136,14 @@
         </section>
     </main>
 
+    <!-- Footer -->
     <footer id="contacto">
         <p class="marca-footer">Amorata</p>
         <p class="frase-footer">Tu antojo, mi próximo desafío.</p>
         <p class="contacto-footer">Pedidos y consultas por WhatsApp e Instagram</p>
+        <div class="credito-desarrollador">
+            made by <a href="https://instagram.com/marcosstein" target="_blank">@marcosstein</a>
+        </div>
     </footer>
 
     <!-- Botones flotantes -->
@@ -148,27 +154,26 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- JAVASCRIPT CORREGIDO (ELIMINÉ LA PARTE QUE FORZABA A MOSTRAR TODOS) -->
     <script>
+        const hamburguesa = document.getElementById('hamburguesa');
+        const menu = document.getElementById('menu');
+
+        hamburguesa.addEventListener('click', () => {
+            menu.classList.toggle('mostrar');
+        });
+
         const botonesFiltro = document.querySelectorAll(".filtro");
         const productos = document.querySelectorAll(".producto");
 
         botonesFiltro.forEach((boton) => {
             boton.addEventListener("click", () => {
                 const filtroSeleccionado = boton.dataset.filtro;
-
-                // Quitar clase activo de todos los botones
                 botonesFiltro.forEach((otroBoton) => {
                     otroBoton.classList.remove("activo");
                 });
-
-                // Poner clase activo al botón clickeado
                 boton.classList.add("activo");
-
-                // Filtrar productos (OCULTAR los que no corresponden)
                 productos.forEach((producto) => {
                     const categoriaProducto = producto.dataset.categoria;
-
                     if (filtroSeleccionado === "todos" || categoriaProducto === filtroSeleccionado) {
                         producto.classList.remove("producto-oculto");
                     } else {
