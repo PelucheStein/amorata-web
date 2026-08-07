@@ -50,7 +50,7 @@
         <section class="grilla-productos catalogo-circular">
 
             <!-- ========================================== -->
-            <!-- SECCIÓN POSTRES (Cheesecakes y Alfajores)  -->
+            <!-- SECCIÓN POSTRES                             -->
             <!-- ========================================== -->
 
             <!-- 1. CHEESECAKE DE FRUTILLA -->
@@ -67,7 +67,7 @@
                 </div>
             </article>
 
-            <!-- 2. CHEESECAKE DE DULCE DE LECHE (Movido a Postres) -->
+            <!-- 2. CHEESECAKE DE DULCE DE LECHE -->
             <article class="producto producto-circular" data-categoria="postres">
                 <div class="producto-foto-circular">
                     <img src="{{ url_for('static', filename='img/cheesecake-ddl.jpg') }}" alt="Cheesecake de dulce de leche">
@@ -81,7 +81,7 @@
                 </div>
             </article>
 
-            <!-- 3. ALFAJORES (NUEVO - Postres) -->
+            <!-- 3. ALFAJORES -->
             <article class="producto producto-circular" data-categoria="postres">
                 <div class="producto-foto-circular">
                     <img src="{{ url_for('static', filename='img/alfajores.jpg') }}" alt="Alfajores">
@@ -95,11 +95,25 @@
                 </div>
             </article>
 
+            <!-- 4. ROGEL (CORREGIDO EN POSTRES) -->
+            <article class="producto producto-circular" data-categoria="postres">
+                <div class="producto-foto-circular">
+                    <img src="{{ url_for('static', filename='img/rogel.jpg') }}" alt="Rogel">
+                </div>
+                <div class="producto-contenido">
+                    <p class="producto-categoria">Postres</p>
+                    <h2>Rogel</h2>
+                    <p class="producto-descripcion">Capas crocantes, dulce de leche y una cobertura suave de merengue.</p>
+                    <p class="producto-precio">Desde $8.500</p>
+                    <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20consultar%20por%20el%20Rogel." target="_blank" class="producto-boton">Consultar</a>
+                </div>
+            </article>
+
             <!-- ========================================== -->
             <!-- SECCIÓN TARTAS                              -->
             <!-- ========================================== -->
 
-            <!-- 4. TARTA DE COCO Y DULCE DE LECHE -->
+            <!-- 5. TARTA DE COCO Y DULCE DE LECHE -->
             <article class="producto producto-circular" data-categoria="tartas">
                 <div class="producto-foto-circular">
                     <img src="{{ url_for('static', filename='img/tarta-coco.jpg') }}" alt="Tarta de coco y dulce de leche">
@@ -113,7 +127,7 @@
                 </div>
             </article>
 
-            <!-- 5. TARTA DE FRUTAS -->
+            <!-- 6. TARTA DE FRUTAS -->
             <article class="producto producto-circular" data-categoria="tartas">
                 <div class="producto-foto-circular">
                     <img src="{{ url_for('static', filename='img/tarta-frutas.jpg') }}" alt="Tarta de frutas">
@@ -130,20 +144,6 @@
             <!-- ========================================== -->
             <!-- SECCIÓN PANIFICADOS                         -->
             <!-- ========================================== -->
-
-            <!-- 6. ROGEL (Sigue en Panificados o Postres? Lo dejamos en Panificados como antes) -->
-            <article class="producto producto-circular" data-categoria="panificados">
-                <div class="producto-foto-circular">
-                    <img src="{{ url_for('static', filename='img/rogel.jpg') }}" alt="Rogel">
-                </div>
-                <div class="producto-contenido">
-                    <p class="producto-categoria">Panificados</p>
-                    <h2>Rogel</h2>
-                    <p class="producto-descripcion">Capas crocantes, dulce de leche y una cobertura suave de merengue.</p>
-                    <p class="producto-precio">Desde $8.500</p>
-                    <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20consultar%20por%20el%20Rogel." target="_blank" class="producto-boton">Consultar</a>
-                </div>
-            </article>
 
             <!-- 7. ROLLS DE CANELA -->
             <article class="producto producto-circular" data-categoria="panificados">
