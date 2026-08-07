@@ -49,7 +49,11 @@
 
         <section class="grilla-productos catalogo-circular">
 
-            <!-- 1. CHEESECAKE DE FRUTILLA (Postres) -->
+            <!-- ========================================== -->
+            <!-- SECCIÓN POSTRES (Cheesecakes y Alfajores)  -->
+            <!-- ========================================== -->
+
+            <!-- 1. CHEESECAKE DE FRUTILLA -->
             <article class="producto producto-circular" data-categoria="postres">
                 <div class="producto-foto-circular">
                     <img src="{{ url_for('static', filename='img/cheesecake.jpg') }}" alt="Cheesecake de frutilla">
@@ -58,12 +62,44 @@
                     <p class="producto-categoria">Postres</p>
                     <h2>Cheesecake de frutilla</h2>
                     <p class="producto-descripcion">Base crocante de galletitas, relleno cremoso y cobertura de frutilla.</p>
-                    <p class="producto-precio">Desde $15.000</p>
+                    <p class="producto-precio">Desde $18.000</p>
                     <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20consultar%20por%20el%20Cheesecake%20de%20frutilla." target="_blank" class="producto-boton">Consultar</a>
                 </div>
             </article>
 
-            <!-- 2. TARTA DE COCO Y DULCE DE LECHE (Tartas) -->
+            <!-- 2. CHEESECAKE DE DULCE DE LECHE (Movido a Postres) -->
+            <article class="producto producto-circular" data-categoria="postres">
+                <div class="producto-foto-circular">
+                    <img src="{{ url_for('static', filename='img/cheesecake-ddl.jpg') }}" alt="Cheesecake de dulce de leche">
+                </div>
+                <div class="producto-contenido">
+                    <p class="producto-categoria">Postres</p>
+                    <h2>Cheesecake de dulce de leche</h2>
+                    <p class="producto-descripcion">Base crocante de galletitas de chocolate, relleno cremoso con sabor intenso a dulce de leche y ganache de choco.</p>
+                    <p class="producto-precio">Desde $18.000</p>
+                    <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20consultar%20por%20el%20Cheesecake%20de%20dulce%20de%20leche." target="_blank" class="producto-boton">Consultar</a>
+                </div>
+            </article>
+
+            <!-- 3. ALFAJORES (NUEVO - Postres) -->
+            <article class="producto producto-circular" data-categoria="postres">
+                <div class="producto-foto-circular">
+                    <img src="{{ url_for('static', filename='img/alfajores.jpg') }}" alt="Alfajores">
+                </div>
+                <div class="producto-contenido">
+                    <p class="producto-categoria">Postres</p>
+                    <h2>Alfajores</h2>
+                    <p class="producto-descripcion">Masa húmeda de cacao, cubiertos por chocolate y rellenos de dulce de leche.</p>
+                    <p class="producto-precio">Desde $8.000</p>
+                    <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20consultar%20por%20los%20Alfajores." target="_blank" class="producto-boton">Consultar</a>
+                </div>
+            </article>
+
+            <!-- ========================================== -->
+            <!-- SECCIÓN TARTAS                              -->
+            <!-- ========================================== -->
+
+            <!-- 4. TARTA DE COCO Y DULCE DE LECHE -->
             <article class="producto producto-circular" data-categoria="tartas">
                 <div class="producto-foto-circular">
                     <img src="{{ url_for('static', filename='img/tarta-coco.jpg') }}" alt="Tarta de coco y dulce de leche">
@@ -77,49 +113,7 @@
                 </div>
             </article>
 
-            <!-- 3. CHEESECAKE DE DULCE DE LECHE (NUEVO - Tartas) -->
-            <article class="producto producto-circular" data-categoria="tartas">
-                <div class="producto-foto-circular">
-                    <img src="{{ url_for('static', filename='img/cheesecake-ddl.jpg') }}" alt="Cheesecake de dulce de leche">
-                </div>
-                <div class="producto-contenido">
-                    <p class="producto-categoria">Tartas</p>
-                    <h2>Cheesecake de dulce de leche</h2>
-                    <p class="producto-descripcion">Base crocante de galletitas de chocolate, relleno cremoso con sabor intenso a dulce de leche y ganache de choco.</p>
-                    <p class="producto-precio">Desde $15.000</p>
-                    <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20consultar%20por%20el%20Cheesecake%20de%20dulce%20de%20leche." target="_blank" class="producto-boton">Consultar</a>
-                </div>
-            </article>
-
-            <!-- 4. ROGEL (Postres) -->
-            <article class="producto producto-circular" data-categoria="postres">
-                <div class="producto-foto-circular">
-                    <img src="{{ url_for('static', filename='img/rogel.jpg') }}" alt="Rogel">
-                </div>
-                <div class="producto-contenido">
-                    <p class="producto-categoria">Postres</p>
-                    <h2>Rogel</h2>
-                    <p class="producto-descripcion">Capas crocantes, dulce de leche y una cobertura suave de merengue.</p>
-                    <p class="producto-precio">Desde $8.500</p>
-                    <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20consultar%20por%20el%20Rogel." target="_blank" class="producto-boton">Consultar</a>
-                </div>
-            </article>
-
-            <!-- 5. ROLLS DE CANELA (Panificados) -->
-            <article class="producto producto-circular" data-categoria="panificados">
-                <div class="producto-foto-circular">
-                    <img src="{{ url_for('static', filename='img/rolls.jpg') }}" alt="Rolls de canela">
-                </div>
-                <div class="producto-contenido">
-                    <p class="producto-categoria">Panificados</p>
-                    <h2>Rolls de canela</h2>
-                    <p class="producto-descripcion">Rolls suaves y esponjosos, rellenos de canela y azúcar.</p>
-                    <p class="producto-precio">Desde $4.000</p>
-                    <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20consultar%20por%20los%20Rolls%20de%20canela." target="_blank" class="producto-boton">Consultar</a>
-                </div>
-            </article>
-
-            <!-- 6. TARTA DE FRUTAS (Tartas) -->
+            <!-- 5. TARTA DE FRUTAS -->
             <article class="producto producto-circular" data-categoria="tartas">
                 <div class="producto-foto-circular">
                     <img src="{{ url_for('static', filename='img/tarta-frutas.jpg') }}" alt="Tarta de frutas">
@@ -133,7 +127,39 @@
                 </div>
             </article>
 
-            <!-- 7. SCONES DE QUESO (Panificados) -->
+            <!-- ========================================== -->
+            <!-- SECCIÓN PANIFICADOS                         -->
+            <!-- ========================================== -->
+
+            <!-- 6. ROGEL (Sigue en Panificados o Postres? Lo dejamos en Panificados como antes) -->
+            <article class="producto producto-circular" data-categoria="panificados">
+                <div class="producto-foto-circular">
+                    <img src="{{ url_for('static', filename='img/rogel.jpg') }}" alt="Rogel">
+                </div>
+                <div class="producto-contenido">
+                    <p class="producto-categoria">Panificados</p>
+                    <h2>Rogel</h2>
+                    <p class="producto-descripcion">Capas crocantes, dulce de leche y una cobertura suave de merengue.</p>
+                    <p class="producto-precio">Desde $8.500</p>
+                    <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20consultar%20por%20el%20Rogel." target="_blank" class="producto-boton">Consultar</a>
+                </div>
+            </article>
+
+            <!-- 7. ROLLS DE CANELA -->
+            <article class="producto producto-circular" data-categoria="panificados">
+                <div class="producto-foto-circular">
+                    <img src="{{ url_for('static', filename='img/rolls.jpg') }}" alt="Rolls de canela">
+                </div>
+                <div class="producto-contenido">
+                    <p class="producto-categoria">Panificados</p>
+                    <h2>Rolls de canela</h2>
+                    <p class="producto-descripcion">Rolls suaves y esponjosos, rellenos de canela y azúcar.</p>
+                    <p class="producto-precio">Desde $3.500</p>
+                    <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20consultar%20por%20los%20Rolls%20de%20canela." target="_blank" class="producto-boton">Consultar</a>
+                </div>
+            </article>
+
+            <!-- 8. SCONES DE QUESO -->
             <article class="producto producto-circular" data-categoria="panificados">
                 <div class="producto-foto-circular">
                     <img src="{{ url_for('static', filename='img/scones.jpg') }}" alt="Scones de queso">
@@ -142,12 +168,12 @@
                     <p class="producto-categoria">Panificados</p>
                     <h2>Scones de queso</h2>
                     <p class="producto-descripcion">Scones suaves, sabrosos y con una textura perfecta para acompañar.</p>
-                    <p class="producto-precio">Desde $6.000</p>
+                    <p class="producto-precio">Desde $4.000</p>
                     <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20consultar%20por%20los%20Scones%20de%20queso." target="_blank" class="producto-boton">Consultar</a>
                 </div>
             </article>
 
-            <!-- 8. PASTAFROLA (NUEVO - Panificados) -->
+            <!-- 9. PASTAFROLA -->
             <article class="producto producto-circular" data-categoria="panificados">
                 <div class="producto-foto-circular">
                     <img src="{{ url_for('static', filename='img/pastafrola.jpg') }}" alt="Pastafrola">
