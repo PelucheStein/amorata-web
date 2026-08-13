@@ -6,11 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo | Amorata</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
@@ -24,10 +22,18 @@
         </button>
 
         <nav class="menu" id="menu">
-            <a href="/">Inicio</a>
-            <a href="/#quienes-somos">Quiénes somos</a>
-            <a href="/catalogo">Catálogo</a>
-            <a href="/#contacto">Contacto</a>
+            <div class="menu-top">
+                <a href="/">Inicio</a>
+                <a href="/#quienes-somos">Quiénes somos</a>
+            </div>
+            <div class="menu-bottom">
+                <a href="/catalogo" class="btn-catalogo-menu">Catálogo</a>
+                <a href="/#contacto">Contacto</a>
+                <a href="#favoritos">Favoritos</a> <!-- CAMBIADO A FAVORITOS -->
+                <button class="theme-btn-nav" id="themeBtnNav">
+                    <i class="fa-solid fa-moon" id="themeIcon"></i>
+                </button>
+            </div>
         </nav>
 
         <a href="/" class="boton-menu">Volver al inicio</a>
@@ -40,6 +46,20 @@
             <p>Descubrí nuestros sabores y elegí tu favorito.</p>
         </section>
 
+        <!-- ========== CARRUSEL 3D EN EL CATÁLOGO ========== -->
+        <div class="carrusel-3d-container">
+            <div class="carrusel-3d-track">
+                <img src="{{ url_for('static', filename='img/cheesecake.jpg') }}" alt="Tarta">
+                <img src="{{ url_for('static', filename='img/rogel.jpg') }}" alt="Rogel">
+                <img src="{{ url_for('static', filename='img/tarta-coco.jpg') }}" alt="Coco">
+                <img src="{{ url_for('static', filename='img/alfajores.jpg') }}" alt="Alfajores">
+                <img src="{{ url_for('static', filename='img/tarta-frutas.jpg') }}" alt="Frutas">
+                <img src="{{ url_for('static', filename='img/cheesecake-ddl.jpg') }}" alt="DDL">
+                <img src="{{ url_for('static', filename='img/cheesecake.jpg') }}" alt="Tarta">
+                <img src="{{ url_for('static', filename='img/rogel.jpg') }}" alt="Rogel">
+            </div>
+        </div>
+
         <section class="filtros-catalogo">
             <button class="filtro activo" data-filtro="todos">Todos</button>
             <button class="filtro" data-filtro="tartas">Tartas</button>
@@ -48,7 +68,6 @@
         </section>
 
         <section class="grilla-productos catalogo-circular">
-
             <!-- ========================================== -->
             <!-- SECCIÓN POSTRES                             -->
             <!-- ========================================== -->
@@ -62,8 +81,11 @@
                     <p class="producto-categoria">Postres</p>
                     <h2>Cheesecake de frutilla</h2>
                     <p class="producto-descripcion">Base crocante de galletitas, relleno cremoso y cobertura de frutilla.</p>
-                    <p class="producto-precio">Desde $18.000</p>
-                    <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20consultar%20por%20el%20Cheesecake%20de%20frutilla." target="_blank" class="producto-boton">Consultar</a>
+                    <p class="producto-precio">Chico $20.000 / Mediano $26.500</p>
+                    <div class="producto-final">
+                        <a href="https://wa.me/5493754456198?text=Hola%20Ro%20🤍%20Quisiera%20hacer%20un%20pedido.%20Me%20interesa%20el%20Cheesecake%20de%20frutilla." target="_blank" class="producto-boton">Consultar</a>
+                        <button class="producto-boton" onclick="addToCart('Cheesecake de frutilla', 'Chico 20.000 / Mediano 26.500')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
+                    </div>
                 </div>
             </article>
 
@@ -76,26 +98,49 @@
                     <p class="producto-categoria">Postres</p>
                     <h2>Cheesecake de dulce de leche</h2>
                     <p class="producto-descripcion">Base crocante de galletitas de chocolate, relleno cremoso con sabor intenso a dulce de leche y ganache de choco.</p>
-                    <p class="producto-precio">Desde $18.000</p>
-                    <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20consultar%20por%20el%20Cheesecake%20de%20dulce%20de%20leche." target="_blank" class="producto-boton">Consultar</a>
+                    <p class="producto-precio">Chico $21.000 / Mediano $27.500</p>
+                    <div class="producto-final">
+                        <a href="https://wa.me/5493754456198?text=Hola%20Ro%20🤍%20Quisiera%20hacer%20un%20pedido.%20Me%20interesa%20el%20Cheesecake%20de%20dulce%20de%20leche." target="_blank" class="producto-boton">Consultar</a>
+                        <button class="producto-boton" onclick="addToCart('Cheesecake de dulce de leche', 'Chico 21.000 / Mediano 27.500')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
+                    </div>
                 </div>
             </article>
 
-            <!-- 3. ALFAJORES -->
+            <!-- 3. ALFAJORES CLÁSICOS -->
             <article class="producto producto-circular" data-categoria="postres">
                 <div class="producto-foto-circular">
-                    <img src="{{ url_for('static', filename='img/alfajores.jpg') }}" alt="Alfajores">
+                    <img src="{{ url_for('static', filename='img/alfajores.jpg') }}" alt="Alfajores Clásicos">
                 </div>
                 <div class="producto-contenido">
                     <p class="producto-categoria">Postres</p>
-                    <h2>Alfajores</h2>
+                    <h2>Alfajores Clásicos</h2>
                     <p class="producto-descripcion">Masa húmeda de cacao, cubiertos por chocolate y rellenos de dulce de leche.</p>
-                    <p class="producto-precio">Desde $8.000</p>
-                    <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20consultar%20por%20los%20Alfajores." target="_blank" class="producto-boton">Consultar</a>
+                    <p class="producto-precio">Media docena $12.000</p>
+                    <div class="producto-final">
+                        <a href="https://wa.me/5493754456198?text=Hola%20Ro%20🤍%20Quisiera%20hacer%20un%20pedido.%20Me%20interesan%20los%20Alfajores%20Clásicos." target="_blank" class="producto-boton">Consultar</a>
+                        <button class="producto-boton" onclick="addToCart('Alfajores Clásicos', 'Media docena 12.000')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
+                    </div>
                 </div>
             </article>
 
-            <!-- 4. ROGEL (CORREGIDO EN POSTRES) -->
+            <!-- 4. ALFAJORES PREMIUM (NUEVO) -->
+            <article class="producto producto-circular" data-categoria="postres">
+                <div class="producto-foto-circular">
+                    <img src="{{ url_for('static', filename='img/alfajores-premium.jpg') }}" alt="Alfajores Premium">
+                </div>
+                <div class="producto-contenido">
+                    <p class="producto-categoria">Postres</p>
+                    <h2>Alfajores Premium</h2>
+                    <p class="producto-descripcion">Masa de cacao con un delicioso relleno de dulce de leche y nueces, cubierta con chocolate a elección y diferentes toppings.</p>
+                    <p class="producto-precio">Media docena $17.000</p>
+                    <div class="producto-final">
+                        <a href="https://wa.me/5493754456198?text=Hola%20Ro%20🤍%20Quisiera%20hacer%20un%20pedido.%20Me%20interesan%20los%20Alfajores%20Premium." target="_blank" class="producto-boton">Consultar</a>
+                        <button class="producto-boton" onclick="addToCart('Alfajores Premium', 'Media docena 17.000')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 5. ROGEL -->
             <article class="producto producto-circular" data-categoria="postres">
                 <div class="producto-foto-circular">
                     <img src="{{ url_for('static', filename='img/rogel.jpg') }}" alt="Rogel">
@@ -104,8 +149,28 @@
                     <p class="producto-categoria">Postres</p>
                     <h2>Rogel</h2>
                     <p class="producto-descripcion">Capas crocantes, dulce de leche y una cobertura suave de merengue.</p>
-                    <p class="producto-precio">Desde $8.500</p>
-                    <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20consultar%20por%20el%20Rogel." target="_blank" class="producto-boton">Consultar</a>
+                    <p class="producto-precio">Desde $8.000</p>
+                    <div class="producto-final">
+                        <a href="https://wa.me/5493754456198?text=Hola%20Ro%20🤍%20Quisiera%20hacer%20un%20pedido.%20Me%20interesa%20el%20Rogel." target="_blank" class="producto-boton">Consultar</a>
+                        <button class="producto-boton" onclick="addToCart('Rogel', '8.000')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 6. CHOCOTORTA (NUEVO) -->
+            <article class="producto producto-circular" data-categoria="postres">
+                <div class="producto-foto-circular">
+                    <img src="{{ url_for('static', filename='img/chocotorta.jpg') }}" alt="Chocotorta">
+                </div>
+                <div class="producto-contenido">
+                    <p class="producto-categoria">Postres</p>
+                    <h2>Chocotorta</h2>
+                    <p class="producto-descripcion">Galletitas de chocolate, relleno clásico, ganache de chocolate a elección (blanco o negro).</p>
+                    <p class="producto-precio">Desde $18.000</p>
+                    <div class="producto-final">
+                        <a href="https://wa.me/5493754456198?text=Hola%20Ro%20🤍%20Quisiera%20hacer%20un%20pedido.%20Me%20interesa%20la%20Chocotorta." target="_blank" class="producto-boton">Consultar</a>
+                        <button class="producto-boton" onclick="addToCart('Chocotorta', '18.000')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
+                    </div>
                 </div>
             </article>
 
@@ -113,7 +178,7 @@
             <!-- SECCIÓN TARTAS                              -->
             <!-- ========================================== -->
 
-            <!-- 5. TARTA DE COCO Y DULCE DE LECHE -->
+            <!-- 7. TARTA DE COCO Y DULCE DE LECHE -->
             <article class="producto producto-circular" data-categoria="tartas">
                 <div class="producto-foto-circular">
                     <img src="{{ url_for('static', filename='img/tarta-coco.jpg') }}" alt="Tarta de coco y dulce de leche">
@@ -123,11 +188,14 @@
                     <h2>Tarta de coco y Dulce de leche</h2>
                     <p class="producto-descripcion">Masa suave, abundante dulce de leche y una cobertura húmeda de coco.</p>
                     <p class="producto-precio">Desde $10.000</p>
-                    <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20consultar%20por%20la%20Tarta%20de%20coco%20y%20DDL." target="_blank" class="producto-boton">Consultar</a>
+                    <div class="producto-final">
+                        <a href="https://wa.me/5493754456198?text=Hola%20Ro%20🤍%20Quisiera%20hacer%20un%20pedido.%20Me%20interesa%20la%20Tarta%20de%20coco%20y%20DDL." target="_blank" class="producto-boton">Consultar</a>
+                        <button class="producto-boton" onclick="addToCart('Tarta de coco y DDL', '10.000')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
+                    </div>
                 </div>
             </article>
 
-            <!-- 6. TARTA DE FRUTAS -->
+            <!-- 8. TARTA DE FRUTAS -->
             <article class="producto producto-circular" data-categoria="tartas">
                 <div class="producto-foto-circular">
                     <img src="{{ url_for('static', filename='img/tarta-frutas.jpg') }}" alt="Tarta de frutas">
@@ -136,8 +204,28 @@
                     <p class="producto-categoria">Tartas</p>
                     <h2>Tarta de frutas</h2>
                     <p class="producto-descripcion">Base crocante, crema suave y una selección de frutas frescas.</p>
-                    <p class="producto-precio">Desde $13.000</p>
-                    <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20consultar%20por%20la%20Tarta%20de%20frutas." target="_blank" class="producto-boton">Consultar</a>
+                    <p class="producto-precio">Desde $14.000</p>
+                    <div class="producto-final">
+                        <a href="https://wa.me/5493754456198?text=Hola%20Ro%20🤍%20Quisiera%20hacer%20un%20pedido.%20Me%20interesa%20la%20Tarta%20de%20frutas." target="_blank" class="producto-boton">Consultar</a>
+                        <button class="producto-boton" onclick="addToCart('Tarta de frutas', '14.000')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 9. ORANGE PIE (NUEVO) -->
+            <article class="producto producto-circular" data-categoria="tartas">
+                <div class="producto-foto-circular">
+                    <img src="{{ url_for('static', filename='img/orange-pie.jpg') }}" alt="Orange Pie">
+                </div>
+                <div class="producto-contenido">
+                    <p class="producto-categoria">Tartas</p>
+                    <h2>Orange Pie</h2>
+                    <p class="producto-descripcion">Masa sable, crema pastelera de naranja y merengue.</p>
+                    <p class="producto-precio">Desde $12.000</p>
+                    <div class="producto-final">
+                        <a href="https://wa.me/5493754456198?text=Hola%20Ro%20🤍%20Quisiera%20hacer%20un%20pedido.%20Me%20interesa%20la%20Orange%20Pie." target="_blank" class="producto-boton">Consultar</a>
+                        <button class="producto-boton" onclick="addToCart('Orange Pie', '12.000')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
+                    </div>
                 </div>
             </article>
 
@@ -145,7 +233,7 @@
             <!-- SECCIÓN PANIFICADOS                         -->
             <!-- ========================================== -->
 
-            <!-- 7. ROLLS DE CANELA -->
+            <!-- 10. ROLLS DE CANELA -->
             <article class="producto producto-circular" data-categoria="panificados">
                 <div class="producto-foto-circular">
                     <img src="{{ url_for('static', filename='img/rolls.jpg') }}" alt="Rolls de canela">
@@ -155,11 +243,14 @@
                     <h2>Rolls de canela</h2>
                     <p class="producto-descripcion">Rolls suaves y esponjosos, rellenos de canela y azúcar.</p>
                     <p class="producto-precio">Desde $3.500</p>
-                    <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20consultar%20por%20los%20Rolls%20de%20canela." target="_blank" class="producto-boton">Consultar</a>
+                    <div class="producto-final">
+                        <a href="https://wa.me/5493754456198?text=Hola%20Ro%20🤍%20Quisiera%20hacer%20un%20pedido.%20Me%20interesan%20los%20Rolls%20de%20canela." target="_blank" class="producto-boton">Consultar</a>
+                        <button class="producto-boton" onclick="addToCart('Rolls de canela', '3.500')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
+                    </div>
                 </div>
             </article>
 
-            <!-- 8. SCONES DE QUESO -->
+            <!-- 11. SCONES DE QUESO -->
             <article class="producto producto-circular" data-categoria="panificados">
                 <div class="producto-foto-circular">
                     <img src="{{ url_for('static', filename='img/scones.jpg') }}" alt="Scones de queso">
@@ -168,12 +259,15 @@
                     <p class="producto-categoria">Panificados</p>
                     <h2>Scones de queso</h2>
                     <p class="producto-descripcion">Scones suaves, sabrosos y con una textura perfecta para acompañar.</p>
-                    <p class="producto-precio">Desde $4.000</p>
-                    <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20consultar%20por%20los%20Scones%20de%20queso." target="_blank" class="producto-boton">Consultar</a>
+                    <p class="producto-precio">Desde $4.500</p>
+                    <div class="producto-final">
+                        <a href="https://wa.me/5493754456198?text=Hola%20Ro%20🤍%20Quisiera%20hacer%20un%20pedido.%20Me%20interesan%20los%20Scones%20de%20queso." target="_blank" class="producto-boton">Consultar</a>
+                        <button class="producto-boton" onclick="addToCart('Scones de queso', '4.500')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
+                    </div>
                 </div>
             </article>
 
-            <!-- 9. PASTAFROLA -->
+            <!-- 12. PASTAFROLA -->
             <article class="producto producto-circular" data-categoria="panificados">
                 <div class="producto-foto-circular">
                     <img src="{{ url_for('static', filename='img/pastafrola.jpg') }}" alt="Pastafrola">
@@ -183,12 +277,39 @@
                     <h2>Pastafrola</h2>
                     <p class="producto-descripcion">Masa suave, con dulce a elección, almíbar y mucho coco.</p>
                     <p class="producto-precio">Desde $8.000</p>
-                    <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20consultar%20por%20la%20Pastafrola." target="_blank" class="producto-boton">Consultar</a>
+                    <div class="producto-final">
+                        <a href="https://wa.me/5493754456198?text=Hola%20Ro%20🤍%20Quisiera%20hacer%20un%20pedido.%20Me%20interesa%20la%20Pastafrola." target="_blank" class="producto-boton">Consultar</a>
+                        <button class="producto-boton" onclick="addToCart('Pastafrola', '8.000')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
+                    </div>
                 </div>
             </article>
-
         </section>
+
+        <!-- ========== BOX MATERO (NUEVO) ========== -->
+        <section class="box-matero">
+            <h2 class="box-matero-titulo">Box Matero</h2>
+            <div class="box-matero-contenido">
+                <div class="proximamente-container">
+                    <i class="fa-solid fa-clock reloj-icono"></i>
+                    <p class="proximamente-texto">Próximamente</p>
+                    <p class="proximamente-sub">Estamos preparando algo especial para vos.</p>
+                </div>
+            </div>
+        </section>
+
     </main>
+
+    <!-- ================================================================ -->
+    <!-- SECCIÓN FAVORITOS (ANTES "MOMENTOS", AHORA "FAVORITOS")          -->
+    <!-- ================================================================ -->
+    <section class="seccion-favoritos" id="favoritos">
+        <h2 class="titulo-favoritos">Favoritos</h2>
+        
+        <div class="collage-vidrio-container">
+            <!-- ACÁ PONÉ EL NOMBRE DE TU IMAGEN COLLAGE -->
+            <img src="{{ url_for('static', filename='img/collage-momentos.jpg') }}" alt="Collage de Favoritos Amorata" class="collage-vidrio-img">
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer id="contacto">
@@ -204,9 +325,15 @@
     <a href="https://instagram.com/amoorataa" class="boton-flotante instagram" target="_blank" aria-label="Instagram">
         <i class="fa-brands fa-instagram"></i>
     </a>
-    <a href="https://wa.me/5493754456198" class="boton-flotante whatsapp" target="_blank" aria-label="WhatsApp">
+    <a href="https://wa.me/5493754456198?text=Hola%20Ro%20🤍%20Quisiera%20hacer%20un%20pedido." class="boton-flotante whatsapp" target="_blank" aria-label="WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
+
+    <!-- ========== MINICARRITO DE COMPRAS ========== -->
+    <div class="mini-cart" id="miniCart" onclick="enviarPedidoWhatsApp()">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="cart-count" id="cartCount">0</span>
+    </div>
 
     <script>
         const hamburguesa = document.getElementById('hamburguesa');
@@ -236,6 +363,61 @@
                 });
             });
         });
+
+        // ========== MODO OSCURO ==========
+        const themeBtnNav = document.getElementById('themeBtnNav');
+        const themeIcon = document.getElementById('themeIcon');
+        const html = document.documentElement;
+        let theme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', theme);
+        updateThemeUI();
+
+        function updateThemeUI() {
+            const isDark = html.getAttribute('data-theme') === 'dark';
+            themeIcon.className = isDark ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+        }
+
+        themeBtnNav.addEventListener('click', () => {
+            const current = html.getAttribute('data-theme');
+            const next = current === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+            updateThemeUI();
+        });
+
+        // ========== MINICARRITO DE COMPRAS (NUEVO MENSAJE) ==========
+        let cart = [];
+        const cartCount = document.getElementById('cartCount');
+
+        function addToCart(productName, price) {
+            cart.push({ name: productName, price: price });
+            cartCount.innerText = cart.length;
+            const cartIcon = document.querySelector('.mini-cart');
+            cartIcon.style.transform = 'scale(1.2)';
+            setTimeout(() => cartIcon.style.transform = 'scale(1)', 200);
+        }
+
+        function enviarPedidoWhatsApp() {
+            if (cart.length === 0) {
+                const cartIcon = document.querySelector('.mini-cart');
+                cartIcon.style.border = '2px solid red';
+                cartIcon.style.transform = 'scale(1.1)';
+                setTimeout(() => {
+                    cartIcon.style.border = '1px solid var(--border-color)';
+                    cartIcon.style.transform = 'scale(1)';
+                }, 800);
+                return;
+            }
+            // NUEVO MENSAJE CON CORAZÓN BLANCO
+            let mensaje = "Hola Ro! Quisiera hacer un pedido.\n\n";
+            
+            cart.forEach((item, index) => {
+                mensaje += `${index + 1}. ${item.name} - $${item.price}\n`;
+            });
+
+            const url = `https://wa.me/5493754456198?text=${encodeURIComponent(mensaje)}`;
+            window.open(url, '_blank');
+        }
     </script>
 </body>
 </html>

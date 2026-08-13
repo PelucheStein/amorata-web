@@ -6,11 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amorata | El lugarcito de Ro</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
@@ -19,16 +17,24 @@
     <!-- Barra superior -->
     <header class="encabezado">
         <a href="/" class="marca">Amorata</a>
-        
+
         <button class="hamburguesa" id="hamburguesa" aria-label="Abrir menú">
             <i class="fa-solid fa-bars"></i>
         </button>
 
         <nav class="menu" id="menu">
-            <a href="/">Inicio</a>
-            <a href="#quienes-somos">Quiénes somos</a>
-            <a href="/catalogo">Catálogo</a>
-            <a href="#contacto">Contacto</a>
+            <div class="menu-top">
+                <a href="/">Inicio</a>
+                <a href="#quienes-somos">Quiénes somos</a>
+            </div>
+            <div class="menu-bottom">
+                <a href="/catalogo" class="btn-catalogo-menu">Catálogo</a>
+                <a href="#contacto">Contacto</a>
+                <a href="/catalogo#momentos">Momentos</a>
+                <button class="theme-btn-nav" id="themeBtnNav">
+                    <i class="fa-solid fa-moon" id="themeIcon"></i>
+                </button>
+            </div>
         </nav>
 
         <a href="/catalogo" class="boton-menu">Ver catálogo</a>
@@ -143,12 +149,48 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
+    <!-- Botón Subir Arriba -->
+    <button id="scrollTopBtn" class="scroll-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
     <script>
         const hamburguesa = document.getElementById('hamburguesa');
         const menu = document.getElementById('menu');
 
         hamburguesa.addEventListener('click', () => {
             menu.classList.toggle('mostrar');
+        });
+
+        // MODO OSCURO EN EL INDEX
+        const themeBtnNav = document.getElementById('themeBtnNav');
+        const themeIcon = document.getElementById('themeIcon');
+        const html = document.documentElement;
+        let theme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', theme);
+        updateThemeUI();
+
+        function updateThemeUI() {
+            const isDark = html.getAttribute('data-theme') === 'dark';
+            themeIcon.className = isDark ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+        }
+
+        themeBtnNav.addEventListener('click', () => {
+            const current = html.getAttribute('data-theme');
+            const next = current === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+            updateThemeUI();
+        });
+
+        // BOTÓN SUBIR ARRIBA (VISIBILIDAD)
+        const scrollBtn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollBtn.classList.add('visible');
+            } else {
+                scrollBtn.classList.remove('visible');
+            }
         });
     </script>
 </body>
