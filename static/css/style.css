@@ -594,7 +594,7 @@ body {
     box-shadow: 0 14px 35px rgba(0,0,0,.18);
 }
 
-/* ========== BOX MATERO (NUEVA SECCIÓN) ========== */
+/* ========== BOX MATERO ========== */
 .box-matero {
     padding: 80px 6% 100px;
     text-align: center;
@@ -974,7 +974,12 @@ footer {
 @media (max-width: 520px) {
     .producto-imagen { min-height: 260px; }
     .producto-contenido { padding: 25px 20px; }
-    .producto-final { align-items: flex-start; flex-direction: column; }
+    /* ===== CORRECCIÓN: BOTONES CENTRADOS EN CELULAR ===== */
+    .producto-final {
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+    }
 }
 
 /* ========== CATÁLOGO CON FOTOS CIRCULARES ========== */
@@ -1015,7 +1020,7 @@ footer {
     transition: 0.5s ease;
 }
 
-/* ========== SECCIÓN FAVORITOS (ANTES MOMENTOS) ========== */
+/* ========== SECCIÓN FAVORITOS ========== */
 .seccion-favoritos {
     width: 100%;
     padding: 80px 0 100px;
