@@ -81,15 +81,32 @@
                     <p class="producto-categoria">Postres</p>
                     <h2>Cheesecake de frutilla</h2>
                     <p class="producto-descripcion">Base crocante de galletitas, relleno cremoso y cobertura de frutilla.</p>
-                    <p class="producto-precio">Chico $20.000 / Mediano $26.500</p>
+                    <p class="producto-precio">$25.000</p>
                     <div class="producto-final">
                         <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20hacer%20un%20pedido.%20Me%20interesa%20el%20Cheesecake%20de%20frutilla." target="_blank" class="producto-boton">Consultar</a>
-                        <button class="producto-boton" onclick="addToCart('Cheesecake de frutilla', 'Chico 20.000 / Mediano 26.500')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
+                        <button class="producto-boton" onclick="addToCart('Cheesecake de frutilla', '25.000')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
                     </div>
                 </div>
             </article>
 
-            <!-- 2. CHEESECAKE DE DULCE DE LECHE -->
+            <!-- 2. CHEESECAKE DE FRUTOS ROJOS (NUEVO) -->
+            <article class="producto producto-circular" data-categoria="postres">
+                <div class="producto-foto-circular">
+                    <img src="{{ url_for('static', filename='img/cheesecake-frutos-rojos.jpg') }}" alt="Cheesecake de frutos rojos">
+                </div>
+                <div class="producto-contenido">
+                    <p class="producto-categoria">Postres</p>
+                    <h2>Cheesecake de frutos rojos</h2>
+                    <p class="producto-descripcion">Base crocante, relleno cremoso y cobertura de frutos rojos frescos.</p>
+                    <p class="producto-precio">$27.000</p>
+                    <div class="producto-final">
+                        <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20hacer%20un%20pedido.%20Me%20interesa%20el%20Cheesecake%20de%20frutos%20rojos." target="_blank" class="producto-boton">Consultar</a>
+                        <button class="producto-boton" onclick="addToCart('Cheesecake de frutos rojos', '27.000')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 3. CHEESECAKE DE DULCE DE LECHE -->
             <article class="producto producto-circular" data-categoria="postres">
                 <div class="producto-foto-circular">
                     <img src="{{ url_for('static', filename='img/cheesecake-ddl.jpg') }}" alt="Cheesecake de dulce de leche">
@@ -98,15 +115,15 @@
                     <p class="producto-categoria">Postres</p>
                     <h2>Cheesecake de dulce de leche</h2>
                     <p class="producto-descripcion">Base crocante de galletitas de chocolate, relleno cremoso con sabor intenso a dulce de leche y ganache de choco.</p>
-                    <p class="producto-precio">Chico $21.000 / Mediano $27.500</p>
+                    <p class="producto-precio">$27.000</p>
                     <div class="producto-final">
                         <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20hacer%20un%20pedido.%20Me%20interesa%20el%20Cheesecake%20de%20dulce%20de%20leche." target="_blank" class="producto-boton">Consultar</a>
-                        <button class="producto-boton" onclick="addToCart('Cheesecake de dulce de leche', 'Chico 21.000 / Mediano 27.500')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
+                        <button class="producto-boton" onclick="addToCart('Cheesecake de dulce de leche', '27.000')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
                     </div>
                 </div>
             </article>
 
-            <!-- 3. ALFAJORES CLÁSICOS -->
+            <!-- 4. ALFAJORES CLÁSICOS -->
             <article class="producto producto-circular" data-categoria="postres">
                 <div class="producto-foto-circular">
                     <img src="{{ url_for('static', filename='img/alfajores.jpg') }}" alt="Alfajores Clásicos">
@@ -123,7 +140,7 @@
                 </div>
             </article>
 
-            <!-- 4. ALFAJORES PREMIUM -->
+            <!-- 5. ALFAJORES PREMIUM -->
             <article class="producto producto-circular" data-categoria="postres">
                 <div class="producto-foto-circular">
                     <img src="{{ url_for('static', filename='img/alfajores-premium.jpg') }}" alt="Alfajores Premium">
@@ -132,32 +149,66 @@
                     <p class="producto-categoria">Postres</p>
                     <h2>Alfajores Premium</h2>
                     <p class="producto-descripcion">Masa de cacao con un delicioso relleno de dulce de leche y nueces, cubierta con chocolate a elección y diferentes toppings.</p>
-                    <p class="producto-precio">Media docena $17.000</p>
+                    <p class="producto-precio">Media docena $15.000</p>
                     <div class="producto-final">
                         <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20hacer%20un%20pedido.%20Me%20interesan%20los%20Alfajores%20Premium." target="_blank" class="producto-boton">Consultar</a>
-                        <button class="producto-boton" onclick="addToCart('Alfajores Premium', 'Media docena 17.000')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
+                        <button class="producto-boton" onclick="addToCart('Alfajores Premium', 'Media docena 15.000')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
                     </div>
                 </div>
             </article>
 
-            <!-- 5. ROGEL -->
+            <!-- 6. MINI ALFAJORCITOS (NUEVO) -->
+            <article class="producto producto-circular" data-categoria="postres">
+                <div class="producto-foto-circular">
+                    <img src="{{ url_for('static', filename='img/mini-alfajorcitos.jpg') }}" alt="Mini alfajorcitos">
+                </div>
+                <div class="producto-contenido">
+                    <p class="producto-categoria">Postres</p>
+                    <h2>Mini alfajorcitos</h2>
+                    <p class="producto-descripcion">Masa húmeda de cacao, rellenos de dulce de leche con un corazón de frutilla.</p>
+                    <p class="producto-precio">Media docena $8.000</p>
+                    <div class="producto-final">
+                        <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20hacer%20un%20pedido.%20Me%20interesan%20los%20Mini%20alfajorcitos." target="_blank" class="producto-boton">Consultar</a>
+                        <button class="producto-boton" onclick="addToCart('Mini alfajorcitos', 'Media docena 8.000')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 7. LETTER CAKE (NUEVO) -->
+            <article class="producto producto-circular" data-categoria="postres">
+                <div class="producto-foto-circular">
+                    <img src="{{ url_for('static', filename='img/letter-cake.jpg') }}" alt="Letter Cake">
+                </div>
+                <div class="producto-contenido">
+                    <p class="producto-categoria">Postres</p>
+                    <h2>Letter Cake</h2>
+                    <p class="producto-descripcion">Letra o palabra a elección, con una base de cacao y otra de jengibre y vainilla, rellena de dulce de leche y cubierta con chantilly y frutos rojos.</p>
+                    <p class="producto-precio">$18.000</p>
+                    <div class="producto-final">
+                        <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20hacer%20un%20pedido.%20Me%20interesa%20el%20Letter%20Cake." target="_blank" class="producto-boton">Consultar</a>
+                        <button class="producto-boton" onclick="addToCart('Letter Cake', '18.000')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 8. ROGEL -->
             <article class="producto producto-circular" data-categoria="postres">
                 <div class="producto-foto-circular">
                     <img src="{{ url_for('static', filename='img/rogel.jpg') }}" alt="Rogel">
                 </div>
                 <div class="producto-contenido">
                     <p class="producto-categoria">Postres</p>
-                    <h2>Rogel</h2>
+                    <h2>Rogel (chico)</h2>
                     <p class="producto-descripcion">Capas crocantes, dulce de leche y una cobertura suave de merengue.</p>
-                    <p class="producto-precio">Desde $8.000</p>
+                    <p class="producto-precio">$12.000</p>
                     <div class="producto-final">
                         <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20hacer%20un%20pedido.%20Me%20interesa%20el%20Rogel." target="_blank" class="producto-boton">Consultar</a>
-                        <button class="producto-boton" onclick="addToCart('Rogel', '8.000')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
+                        <button class="producto-boton" onclick="addToCart('Rogel (chico)', '12.000')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
                     </div>
                 </div>
             </article>
 
-            <!-- 6. CHOCOTORTA -->
+            <!-- 9. CHOCOTORTA -->
             <article class="producto producto-circular" data-categoria="postres">
                 <div class="producto-foto-circular">
                     <img src="{{ url_for('static', filename='img/chocotorta.jpg') }}" alt="Chocotorta">
@@ -166,7 +217,7 @@
                     <p class="producto-categoria">Postres</p>
                     <h2>Chocotorta</h2>
                     <p class="producto-descripcion">Galletitas de chocolate, relleno clásico, ganache de chocolate a elección (blanco o negro).</p>
-                    <p class="producto-precio">Desde $18.000</p>
+                    <p class="producto-precio">$18.000</p>
                     <div class="producto-final">
                         <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20hacer%20un%20pedido.%20Me%20interesa%20la%20Chocotorta." target="_blank" class="producto-boton">Consultar</a>
                         <button class="producto-boton" onclick="addToCart('Chocotorta', '18.000')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
@@ -178,7 +229,7 @@
             <!-- SECCIÓN TARTAS                              -->
             <!-- ========================================== -->
 
-            <!-- 7. TARTA DE COCO Y DULCE DE LECHE -->
+            <!-- 10. TARTA DE COCO Y DULCE DE LECHE -->
             <article class="producto producto-circular" data-categoria="tartas">
                 <div class="producto-foto-circular">
                     <img src="{{ url_for('static', filename='img/tarta-coco.jpg') }}" alt="Tarta de coco y dulce de leche">
@@ -187,7 +238,7 @@
                     <p class="producto-categoria">Tartas</p>
                     <h2>Tarta de coco y Dulce de leche</h2>
                     <p class="producto-descripcion">Masa suave, abundante dulce de leche y una cobertura húmeda de coco.</p>
-                    <p class="producto-precio">Desde $10.000</p>
+                    <p class="producto-precio">$10.000</p>
                     <div class="producto-final">
                         <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20hacer%20un%20pedido.%20Me%20interesa%20la%20Tarta%20de%20coco%20y%20DDL." target="_blank" class="producto-boton">Consultar</a>
                         <button class="producto-boton" onclick="addToCart('Tarta de coco y DDL', '10.000')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
@@ -195,7 +246,7 @@
                 </div>
             </article>
 
-            <!-- 8. TARTA DE FRUTAS -->
+            <!-- 11. TARTA DE FRUTAS -->
             <article class="producto producto-circular" data-categoria="tartas">
                 <div class="producto-foto-circular">
                     <img src="{{ url_for('static', filename='img/tarta-frutas.jpg') }}" alt="Tarta de frutas">
@@ -204,15 +255,15 @@
                     <p class="producto-categoria">Tartas</p>
                     <h2>Tarta de frutas</h2>
                     <p class="producto-descripcion">Base crocante, crema suave y una selección de frutas frescas.</p>
-                    <p class="producto-precio">Desde $14.000</p>
+                    <p class="producto-precio">$15.000</p>
                     <div class="producto-final">
                         <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20hacer%20un%20pedido.%20Me%20interesa%20la%20Tarta%20de%20frutas." target="_blank" class="producto-boton">Consultar</a>
-                        <button class="producto-boton" onclick="addToCart('Tarta de frutas', '14.000')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
+                        <button class="producto-boton" onclick="addToCart('Tarta de frutas', '15.000')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
                     </div>
                 </div>
             </article>
 
-            <!-- 9. ORANGE PIE -->
+            <!-- 12. ORANGE PIE -->
             <article class="producto producto-circular" data-categoria="tartas">
                 <div class="producto-foto-circular">
                     <img src="{{ url_for('static', filename='img/orange-pie.jpg') }}" alt="Orange Pie">
@@ -221,10 +272,95 @@
                     <p class="producto-categoria">Tartas</p>
                     <h2>Orange Pie</h2>
                     <p class="producto-descripcion">Masa sable, crema pastelera de naranja y merengue.</p>
-                    <p class="producto-precio">Desde $12.000</p>
+                    <p class="producto-precio">$12.000</p>
                     <div class="producto-final">
                         <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20hacer%20un%20pedido.%20Me%20interesa%20la%20Orange%20Pie." target="_blank" class="producto-boton">Consultar</a>
                         <button class="producto-boton" onclick="addToCart('Orange Pie', '12.000')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 13. TARTA FRANUI (NUEVO) -->
+            <article class="producto producto-circular" data-categoria="tartas">
+                <div class="producto-foto-circular">
+                    <img src="{{ url_for('static', filename='img/tarta-franui.jpg') }}" alt="Tarta Franui">
+                </div>
+                <div class="producto-contenido">
+                    <p class="producto-categoria">Tartas</p>
+                    <h2>Tarta Franui</h2>
+                    <p class="producto-descripcion">Base de galletitas de vainilla, ganache de chocolate negro, reducción de frutillas y ganache de chocolate blanco.</p>
+                    <p class="producto-precio">$20.000</p>
+                    <div class="producto-final">
+                        <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20hacer%20un%20pedido.%20Me%20interesa%20la%20Tarta%20Franui." target="_blank" class="producto-boton">Consultar</a>
+                        <button class="producto-boton" onclick="addToCart('Tarta Franui', '20.000')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 14. TARTA DE MANZANA INVERTIDA (NUEVO) -->
+            <article class="producto producto-circular" data-categoria="tartas">
+                <div class="producto-foto-circular">
+                    <img src="{{ url_for('static', filename='img/tarta-manzana.jpg') }}" alt="Tarta de manzana invertida">
+                </div>
+                <div class="producto-contenido">
+                    <p class="producto-categoria">Tartas</p>
+                    <h2>Tarta de manzana invertida</h2>
+                    <p class="producto-descripcion">Súper esponjosa, con trocitos de manzana por dentro como por fuera y abundante caramelo.</p>
+                    <p class="producto-precio">$12.000</p>
+                    <div class="producto-final">
+                        <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20hacer%20un%20pedido.%20Me%20interesa%20la%20Tarta%20de%20manzana%20invertida." target="_blank" class="producto-boton">Consultar</a>
+                        <button class="producto-boton" onclick="addToCart('Tarta de manzana invertida', '12.000')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 15. TARTA HAVANNET (NUEVO) -->
+            <article class="producto producto-circular" data-categoria="tartas">
+                <div class="producto-foto-circular">
+                    <img src="{{ url_for('static', filename='img/tarta-havannet.jpg') }}" alt="Tarta Havannet">
+                </div>
+                <div class="producto-contenido">
+                    <p class="producto-categoria">Tartas</p>
+                    <h2>Tarta Havannet</h2>
+                    <p class="producto-descripcion">Masa de vainilla, dulce de leche con trocitos de maní y un suave ganache de chocolate negro.</p>
+                    <p class="producto-precio">$15.000</p>
+                    <div class="producto-final">
+                        <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20hacer%20un%20pedido.%20Me%20interesa%20la%20Tarta%20Havannet." target="_blank" class="producto-boton">Consultar</a>
+                        <button class="producto-boton" onclick="addToCart('Tarta Havannet', '15.000')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 16. TARTA CREMOSA DE DULCE DE LECHE (NUEVO) -->
+            <article class="producto producto-circular" data-categoria="tartas">
+                <div class="producto-foto-circular">
+                    <img src="{{ url_for('static', filename='img/tarta-cremosa-ddl.jpg') }}" alt="Tarta cremosa de dulce de leche">
+                </div>
+                <div class="producto-contenido">
+                    <p class="producto-categoria">Tartas</p>
+                    <h2>Tarta cremosa de dulce de leche</h2>
+                    <p class="producto-descripcion">Base de galletitas de cacao, relleno de dulce de leche y café, crema e hilos decorativos de chocolate.</p>
+                    <p class="producto-precio">$12.000</p>
+                    <div class="producto-final">
+                        <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20hacer%20un%20pedido.%20Me%20interesa%20la%20Tarta%20cremosa%20de%20DDL." target="_blank" class="producto-boton">Consultar</a>
+                        <button class="producto-boton" onclick="addToCart('Tarta cremosa de DDL', '12.000')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 17. TARTA DE RICOTA 25CM (NUEVO) -->
+            <article class="producto producto-circular" data-categoria="tartas">
+                <div class="producto-foto-circular">
+                    <img src="{{ url_for('static', filename='img/tarta-ricota.jpg') }}" alt="Tarta de ricota 25cm">
+                </div>
+                <div class="producto-contenido">
+                    <p class="producto-categoria">Tartas</p>
+                    <h2>Tarta de ricota 25cm</h2>
+                    <p class="producto-descripcion">Masa de vainilla, dulce de leche y un relleno cremoso de ricota.</p>
+                    <p class="producto-precio">$18.000</p>
+                    <div class="producto-final">
+                        <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20hacer%20un%20pedido.%20Me%20interesa%20la%20Tarta%20de%20ricota." target="_blank" class="producto-boton">Consultar</a>
+                        <button class="producto-boton" onclick="addToCart('Tarta de ricota 25cm', '18.000')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
                     </div>
                 </div>
             </article>
@@ -233,7 +369,7 @@
             <!-- SECCIÓN PANIFICADOS                         -->
             <!-- ========================================== -->
 
-            <!-- 10. ROLLS DE CANELA -->
+            <!-- 18. ROLLS DE CANELA -->
             <article class="producto producto-circular" data-categoria="panificados">
                 <div class="producto-foto-circular">
                     <img src="{{ url_for('static', filename='img/rolls.jpg') }}" alt="Rolls de canela">
@@ -242,15 +378,15 @@
                     <p class="producto-categoria">Panificados</p>
                     <h2>Rolls de canela</h2>
                     <p class="producto-descripcion">Rolls suaves y esponjosos, rellenos de canela y azúcar.</p>
-                    <p class="producto-precio">Desde $5.000</p>
+                    <p class="producto-precio">$5.000</p>
                     <div class="producto-final">
                         <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20hacer%20un%20pedido.%20Me%20interesan%20los%20Rolls%20de%20canela." target="_blank" class="producto-boton">Consultar</a>
-                        <button class="producto-boton" onclick="addToCart('Rolls de canela', '3.500')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
+                        <button class="producto-boton" onclick="addToCart('Rolls de canela', '5.000')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
                     </div>
                 </div>
             </article>
 
-            <!-- 11. SCONES DE QUESO -->
+            <!-- 19. SCONES DE QUESO -->
             <article class="producto producto-circular" data-categoria="panificados">
                 <div class="producto-foto-circular">
                     <img src="{{ url_for('static', filename='img/scones.jpg') }}" alt="Scones de queso">
@@ -259,7 +395,7 @@
                     <p class="producto-categoria">Panificados</p>
                     <h2>Scones de queso</h2>
                     <p class="producto-descripcion">Scones suaves, sabrosos y con una textura perfecta para acompañar.</p>
-                    <p class="producto-precio">Desde $4.500</p>
+                    <p class="producto-precio">$4.500</p>
                     <div class="producto-final">
                         <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20hacer%20un%20pedido.%20Me%20interesan%20los%20Scones%20de%20queso." target="_blank" class="producto-boton">Consultar</a>
                         <button class="producto-boton" onclick="addToCart('Scones de queso', '4.500')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
@@ -267,7 +403,7 @@
                 </div>
             </article>
 
-            <!-- 12. PASTAFROLA -->
+            <!-- 20. PASTAFROLA -->
             <article class="producto producto-circular" data-categoria="panificados">
                 <div class="producto-foto-circular">
                     <img src="{{ url_for('static', filename='img/pastafrola.jpg') }}" alt="Pastafrola">
@@ -276,23 +412,91 @@
                     <p class="producto-categoria">Panificados</p>
                     <h2>Pastafrola</h2>
                     <p class="producto-descripcion">Masa suave, con dulce a elección, almíbar y mucho coco.</p>
-                    <p class="producto-precio">Desde $8.000</p>
+                    <p class="producto-precio">$8.000</p>
                     <div class="producto-final">
                         <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20hacer%20un%20pedido.%20Me%20interesa%20la%20Pastafrola." target="_blank" class="producto-boton">Consultar</a>
                         <button class="producto-boton" onclick="addToCart('Pastafrola', '8.000')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
                     </div>
                 </div>
             </article>
+
+            <!-- 21. MIX DE GALLETITAS (30 UNID) (NUEVO) -->
+            <article class="producto producto-circular" data-categoria="panificados">
+                <div class="producto-foto-circular">
+                    <img src="{{ url_for('static', filename='img/mix-galletitas.jpg') }}" alt="Mix de galletitas 30 unidades">
+                </div>
+                <div class="producto-contenido">
+                    <p class="producto-categoria">Panificados</p>
+                    <h2>Mix de galletitas (30 unid)</h2>
+                    <p class="producto-descripcion">Ideales para picotear en cualquier momento del día, súper livianas y muy adictivas.</p>
+                    <p class="producto-precio">$8.000</p>
+                    <div class="producto-final">
+                        <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20hacer%20un%20pedido.%20Me%20interesa%20el%20Mix%20de%20galletitas%20(30%20unid)." target="_blank" class="producto-boton">Consultar</a>
+                        <button class="producto-boton" onclick="addToCart('Mix de galletitas (30 unid)', '8.000')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 22. MIX DE GALLETITAS (15 UNID) (NUEVO) -->
+            <article class="producto producto-circular" data-categoria="panificados">
+                <div class="producto-foto-circular">
+                    <img src="{{ url_for('static', filename='img/mix-galletitas.jpg') }}" alt="Mix de galletitas 15 unidades">
+                </div>
+                <div class="producto-contenido">
+                    <p class="producto-categoria">Panificados</p>
+                    <h2>Mix de galletitas (15 unid)</h2>
+                    <p class="producto-descripcion">Ideales para picotear en cualquier momento del día, súper livianas y muy adictivas.</p>
+                    <p class="producto-precio">$4.000</p>
+                    <div class="producto-final">
+                        <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20hacer%20un%20pedido.%20Me%20interesa%20el%20Mix%20de%20galletitas%20(15%20unid)." target="_blank" class="producto-boton">Consultar</a>
+                        <button class="producto-boton" onclick="addToCart('Mix de galletitas (15 unid)', '4.000')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 23. BUDÍN DE LIMÓN Y ARÁNDANOS (NUEVO) -->
+            <article class="producto producto-circular" data-categoria="panificados">
+                <div class="producto-foto-circular">
+                    <img src="{{ url_for('static', filename='img/budin-limon.jpg') }}" alt="Budín de limón">
+                </div>
+                <div class="producto-contenido">
+                    <p class="producto-categoria">Panificados</p>
+                    <h2>Budín de limón</h2>
+                    <p class="producto-descripcion">Esponjoso, suave, y con el ácido justo para equilibrar el dulzor.</p>
+                    <p class="producto-precio">$4.000</p>
+                    <div class="producto-final">
+                        <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20hacer%20un%20pedido.%20Me%20interesa%20el%20Budín%20de%20limón." target="_blank" class="producto-boton">Consultar</a>
+                        <button class="producto-boton" onclick="addToCart('Budín de limón', '4.000')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 24. COOKIES (UNIDAD) (NUEVO) -->
+            <article class="producto producto-circular" data-categoria="panificados">
+                <div class="producto-foto-circular">
+                    <img src="{{ url_for('static', filename='img/cookies.jpg') }}" alt="Cookies">
+                </div>
+                <div class="producto-contenido">
+                    <p class="producto-categoria">Panificados</p>
+                    <h2>Cookies (unidad)</h2>
+                    <p class="producto-descripcion">Con toppings a elección. Traen la medida justa para acompañarte en cualquier momento del día.</p>
+                    <p class="producto-precio">Unidad $1.300</p>
+                    <div class="producto-final">
+                        <a href="https://wa.me/5493754456198?text=Hola%20Ro!%20Quisiera%20hacer%20un%20pedido.%20Me%20interesan%20las%20Cookies." target="_blank" class="producto-boton">Consultar</a>
+                        <button class="producto-boton" onclick="addToCart('Cookies (unidad)', '1.300')" style="border: none; cursor: pointer; background: none;">Agregar 🛒</button>
+                    </div>
+                </div>
+            </article>
         </section>
 
-        <!-- ========== BOX MATERO ========== -->
+        <!-- ========== PRÓXIMAMENTE (NUEVA SECCIÓN) ========== -->
         <section class="box-matero">
-            <h2 class="box-matero-titulo">Box Matero</h2>
+            <h2 class="box-matero-titulo">✨ Próximamente</h2>
             <div class="box-matero-contenido">
                 <div class="proximamente-container">
-                    <i class="fa-solid fa-clock reloj-icono"></i>
-                    <p class="proximamente-texto">Próximamente</p>
-                    <p class="proximamente-sub">Estamos preparando algo especial para vos.</p>
+                    <i class="fa-solid fa-star reloj-icono"></i>
+                    <p class="proximamente-texto">Se vienen cositas nuevas</p>
+                    <p class="proximamente-sub">Estamos preparando más delicias para vos. ¡Atenta a las redes!</p>
                 </div>
             </div>
         </section>
@@ -384,7 +588,7 @@
             updateThemeUI();
         });
 
-        // ========== MINICARRITO DE COMPRAS (MENSAJE SIN CORAZÓN) ==========
+        // ========== MINICARRITO DE COMPRAS ==========
         let cart = [];
         const cartCount = document.getElementById('cartCount');
 
@@ -407,7 +611,6 @@
                 }, 800);
                 return;
             }
-            // NUEVO MENSAJE SIN CORAZÓN, SOLO TEXTO
             let mensaje = "Hola Ro! Quisiera hacer un pedido.\n\n";
             
             cart.forEach((item, index) => {
