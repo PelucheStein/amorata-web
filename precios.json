@@ -1,0 +1,30 @@
+{
+    "productos": [
+        {"nombre": "Cheesecake de frutilla", "precio": "25000"},
+        {"nombre": "Cheesecake de frutos rojos", "precio": "27000"},
+        {"nombre": "Cheesecake de dulce de leche", "precio": "27000"},
+        {"nombre": "Alfajores Clásicos", "precio": "12000"},
+        {"nombre": "Alfajores Premium", "precio": "15000"},
+        {"nombre": "Mini alfajorcitos", "precio": "8000"},
+        {"nombre": "Letter Cake", "precio": "18000"},
+        {"nombre": "Rogel (chico)", "precio": "12000"},
+        {"nombre": "Chocotorta", "precio": "18000"},
+        {"nombre": "Tarta de coco y DDL", "precio": "10000"},
+        {"nombre": "Tarta de frutas", "precio": "15000"},
+        {"nombre": "Orange Pie", "precio": "12000"},
+        {"nombre": "Tarta Franui", "precio": "20000"},
+        {"nombre": "Tarta de manzana invertida", "precio": "12000"},
+        {"nombre": "Tarta Havannet", "precio": "15000"},
+        {"nombre": "Tarta cremosa de DDL", "precio": "12000"},
+        {"nombre": "Tarta de ricota 25cm", "precio": "18000"},
+        {"nombre": "Rolls de canela", "precio": "5000"},
+        {"nombre": "Scones de queso", "precio": "4500"},
+        {"nombre": "Pastafrola", "precio": "8000"},
+        {"nombre": "Mix de galletitas (30 unid)", "precio": "8000"},
+        {"nombre": "Mix de galletitas (15 unid)", "precio": "4000"},
+        {"nombre": "Budín de limón", "precio": "4000"},
+        {"nombre": "Cookies (unidad)", "precio": "1300"}
+    ],
+    "historial": [],
+    "balance": 0
+}
